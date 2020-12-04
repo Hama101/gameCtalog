@@ -1,7 +1,11 @@
+admin password:
+	wajdi
+	wajdi2020
+
 	***card product :
 https://www.bootdey.com/snippets/view/product-full-detail#html
 
-	***list product : 
+	***list product :
 https://www.bootdey.com/snippets/view/Latest-From-Blog
 https://www.bootdey.com/snippets/view/pricing-table-with-images
 https://www.bootdey.com/snippets/view/upcoming-events-cards
