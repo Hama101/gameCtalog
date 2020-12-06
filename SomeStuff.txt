@@ -11,3 +11,5 @@ https://www.bootdey.com/snippets/view/pricing-table-with-images
 https://www.bootdey.com/snippets/view/upcoming-events-cards
 https://www.bootdey.com/snippets/view/bs4-card-block
 https://www.bootdey.com/snippets/view/portfolio-3-column-with-name
+
+automate the BD remplissage using selumin and pandas!

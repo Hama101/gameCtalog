@@ -6,7 +6,7 @@ def home(request):
     return render(request,'base.html')
 
 def games(request):
-    games = Games.objects.all()
+    games = Games.objects.filter().order_by('title')
     dict = {"games" : games}
     return render(request , 'games.html',dict)
 
@@ -17,6 +17,6 @@ def game(response  , id):
 
 def findGame(request):
     title = request.POST["Search"]
-    game = Games.objects.filter(title=title)
+    game = Games.objects.filter(title=title).order_by('title')
     dict = {"game" : game}
     return render(request,'foundGame.html' , dict)
