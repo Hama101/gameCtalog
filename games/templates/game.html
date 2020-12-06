@@ -2,27 +2,27 @@
 {%load static %}
 {% block head%}
     <title>{{game.title}}</title>
-    <link rel="stylesheet" href="{% static 'css/viewdtails.css' %}">
+    <link rel="stylesheet" href="{% static 'css/game.css' %}">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script>
         $(document).ready(function(){
 
-            $(".filter-button").click(function(){
-                var value = $(this).attr('data-filter');
+            $(".f-button").click(function(){
+                var value = $(this).attr('data-f');
                 if(value == "all")
                 {
-                    //$('.filter').removeClass('hidden');
-                    $('.filter').show('1000');
+                    //$('.f').removeClass('hidden');
+                    $('.f').show('1000');
                 }
                 else
                 {
-        //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-        //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-                    $(".filter").not('.'+value).hide('3000');
-                    $('.filter').filter('.'+value).show('3000');
+        //            $('.f[f-item="'+value+'"]').removeClass('hidden');
+        //            $(".f").not('.f[f-item="'+value+'"]').addClass('hidden');
+                    $(".f").not('.'+value).hide('3000');
+                    $('.f').f('.'+value).show('3000');
                 }
             });
-            if ($(".filter-button").removeClass("active")) {
+            if ($(".f-button").removeClass("active")) {
         $(this).removeClass("active");
         }
         $(this).addClass("active");
@@ -61,27 +61,27 @@
 <div>
     <div class="row">
 
-        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 f hdpe">
             <img src="{{game.img1Url}}" class="img-responsive">
         </div>
 
-        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 f irrigation">
             <img src="{{game.img2Url}}" class="img-responsive">
         </div>
 
-        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 f spray">
             <img src="{{game.img3Url}}" class="img-responsive">
         </div>
 
-        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 f irrigation">
             <img src="{{game.img4Url}}" class="img-responsive">
         </div>
 
-        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 f irrigation">
             <img src="{{game.img5Url}}" class="img-responsive">
         </div>
 
-        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 f irrigation">
             <img src="{{game.img6Url}}" class="img-responsive">
         </div>
     </div>

@@ -6,6 +6,6 @@ urlpatterns = [
     path('',v.home ),
     path('games/',v.games ),
     path('games/<int:id>', v.game),
-    url(r'^findGame', v.findGame, name='findGame'),
+    #url(r'^findGame', v.findGame, name='findGame'),
     #path('new/',v.new)
 ]

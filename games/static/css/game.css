@@ -1,6 +1,4 @@
-body{
-    background-image: url("./images/bg.jpg");
-}
+
 /* Create three columns of equal width */
 .columns {
     float: left;
@@ -81,7 +79,7 @@ body{
     height: 45px;
     border-bottom: 1px solid #5e5e5e;
 }
-.filter-button
+.f-button
 {
     font-size: 18px;
     border: 1px solid #42B32F;
@@ -91,7 +89,7 @@ body{
     margin-bottom: 30px;
 
 }
-.filter-button:hover
+.f-button:hover
 {
     font-size: 18px;
     border: 1px solid #d3dfd1;
@@ -101,7 +99,7 @@ body{
     background-color: #42B32F;
 
 }
-.btn-default:active .filter-button:active
+.btn-default:active .f-button:active
 {
     background-color: #42B32F;
     color: white;
