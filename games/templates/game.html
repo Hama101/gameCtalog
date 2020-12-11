@@ -2,7 +2,7 @@
 {%load static %}
 {% block head%}
     <title>{{game.title}}</title>
-    <link rel="stylesheet" href="{% static 'css/game.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gamedetails.css' %}">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -40,11 +40,11 @@
             <ul class="price">
                 <li class="header">Specs</li>
                 <li class="grey">{{game.price}} Dt</li>
-                <li class="info">Os : {{game.os}}</li>
+                <li class="info">Os : {{game.os}} </li>
                 <li class="info">Cpu : {{game.cpu}}</li>
-                <li class="info">Gpu : {{game.gpu}}</li>
-                <li class="info" >Ram : {{game.ram}}</li>
-                <li class="info">Hdd : {{game.hdd}}</li>
+                <li class="info">Gpu : {{game.gpu}} </li>
+                <li class="info" >Ram : {{game.ram}}gb</li>
+                <li class="info">Hdd : {{game.hdd}}gb</li>
             </ul>
         </div>
     </div>
@@ -71,18 +71,6 @@
 
         <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 f spray">
             <img src="{{game.img3Url}}" class="img-responsive">
-        </div>
-
-        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 f irrigation">
-            <img src="{{game.img4Url}}" class="img-responsive">
-        </div>
-
-        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 f irrigation">
-            <img src="{{game.img5Url}}" class="img-responsive">
-        </div>
-
-        <div class="gallery_product element col-lg-4 col-md-4 col-sm-4 col-xs-6 f irrigation">
-            <img src="{{game.img6Url}}" class="img-responsive">
         </div>
     </div>
 </div>
