@@ -41,9 +41,8 @@ def setCategory():
     columns = sheet.max_column
     for i in range(2 , rows + 1 ):
         title = sheet.cell(i , 1).value
-        cell = sheet.cell(i , 2)
-        print("Setting the Category for : " , title)
-        cell.value = "" #call the fucntion here!
+        cell = sheet.cell(i , 3)
+        cell.value = "Catgery" #call the fucntion here!
 
     wb.save("final1.xlsx")
 
@@ -55,9 +54,9 @@ def setPrice():
     columns = sheet.max_column
     for i in range(2 , rows + 1 ):
         title = sheet.cell(i , 1).value
-        cell = sheet.cell(i , 3)
-        print("Setting the Price for : " , title)
-        price = input("Price : ")
+        cell = sheet.cell(i , 4)
+        #print("Setting the Price for : " , title)
+        price = "10"
         cell.value = price #call the fucntion here!
 
     wb.save("final1.xlsx")
@@ -73,7 +72,7 @@ def setSpeces ():
     for i in range(2 , rows + 1 ):
         title = sheet.cell(i , 1).value
         print("Setting the Specs for : " , title)
-        for j in range( 4 , 9):
+        for j in range( 5 , 10):
             specs = sheet.cell(1 , j ).value
             cell = sheet.cell(i , j )
             #print(specs , " :")
@@ -92,7 +91,7 @@ def setDes():
     for i in range(2 , rows + 1 ):
         title = sheet.cell(i , 1).value
         print("Setting the Descriptions for : " , title)
-        for j in range( 9 , 11):
+        for j in range( 10 , 12):
             des = sheet.cell(1 , j ).value
             cell = sheet.cell(i , j )
             #print(des , " :")
@@ -127,7 +126,7 @@ def setImages():
         title = sheet.cell(i , 1).value
         print("Setting the images for : " , title)
         url = getImage(title)
-        for j in range( 11 , 18):
+        for j in range( 11 , 15):
             des = sheet.cell(1 , j ).value
             cell = sheet.cell(i , j )
             #print(des , " :")
@@ -145,11 +144,27 @@ def setYtUrl():
     for i in range(2 , rows + 1 ):
         title = sheet.cell(i , 1).value
         print("Setting the YtUrl for : " , title)
-        cell = sheet.cell(i,18)
+        cell = sheet.cell(i,16)
         cell.value = 0
 
 
         wb.save("final1.xlsx")
+
+def setConsole():
+    conls = ["pc","ps3","ps4","xbox"]
+    wb = xl.load_workbook("final1.xlsx")
+    sheet = wb["Sheet1"]
+    rows = sheet.max_row
+    columns = sheet.max_column
+    for i in range(2 , rows + 1 ):
+        title = sheet.cell(i , 1).value
+        cell = sheet.cell(i , 2)
+        #print("Setting the Price for : " , title)
+        price = conls[r.randint(0,3)]
+        cell.value = price #call the fucntion here!
+
+    wb.save("final1.xlsx")
+
 
 #main fucntions
 #games = getGames()
@@ -157,6 +172,7 @@ def setYtUrl():
 #setCategory()
 #setPrice()
 #setSpeces()
+#setConsole()
 #setDes()
 #setImages()
 #setYtUrl()
